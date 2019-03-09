@@ -49,18 +49,18 @@ message Установка...
 apt install toilet git openssh -y >> /dev/null
 message 'Компоненты установлены'
 echo
-quest 'Запустить установку? (дистрибутив debian) (y/n)'
+quest 'Запустить установку? (дистрибутив backbox) (y/n)'
 message 'Запускаю...'
 
 cd ~/
 
 pkg install wget openssl-tool proot -y >> /dev/null 
 hash -r 
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh 
-bash debian.sh
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh 
+bash backbox.sh
 git clone https://github.com/tvsclass/anlinuxFSe/
 cd anlinuxFSe
 bash faststartINS.sh
 
 message 'установка завершена.'
-message 'введите deb для запуска'
+message 'введите bb для запуска'
